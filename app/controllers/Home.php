@@ -1,9 +1,9 @@
 <?php
 
 //class Home akan dijadikan  default
-class Home {
+class Home extends Controller{
    //method default
    public function index(){
-      echo 'home/index';
+      $this->view('home/index');
    }
 }
