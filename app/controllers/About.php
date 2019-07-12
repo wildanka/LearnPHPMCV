@@ -1,17 +1,22 @@
 <?php
 
-class About{
+class About extends Controller{
 
    /**
     * "index" merupakan method default, 
     * Kita perlu membuat method index, agar ketika controller About dipanggil tanpa ada method PHP tidak akan mengarahkan kita ke route default
     */
-   public function index($nama = 'Wildan K', $pekerjaan='Sultan') //berikan nilai default jika $nama dan $pekerjaan kosong
+   public function index($nama = 'Wildan K', $pekerjaan='Sultan',$usia=24) //berikan nilai default jika $nama dan $pekerjaan kosong
    {
-      //   echo '(anda memanggil) About/Index';
-      echo "Hallo, nama saya $nama, saya adalah seorang $pekerjaan";
+      //gunakan array associative untuk mengirimkan array $data
+      $data['nama'] = $nama;
+      $data['pekerjaan'] = $pekerjaan;
+      $data['usia'] = $usia;
+
+      //kirimkan $data sebagai argument kedua saat memanggil method view
+     $this->view('about/index',$data);
    }
    public function page(){
-      echo '(anda memanggil) About/Page';
+      $this->view('about/page');
    }
 }
