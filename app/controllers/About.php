@@ -13,14 +13,17 @@ class About extends Controller
       $data['nama'] = $nama;
       $data['pekerjaan'] = $pekerjaan;
       $data['usia'] = $usia;
-
+      $header_data['judul'] = 'About';
       //kirimkan $data sebagai argument kedua saat memanggil method view
-      $this->view('templates/header', $data);
+      $this->view('templates/header', $header_data);
       $this->view('about/index', $data);
-      $this->view('templates/footer', $data);
+      $this->view('templates/footer');
    }
    public function page()
    {
+      $header_data['judul'] = 'About - Page';
+      $this->view('templates/header', $header_data);
       $this->view('about/page');
+      $this->view('templates/footer');
    }
 }
