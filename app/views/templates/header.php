@@ -12,7 +12,7 @@
    <title><?php echo $data['judul'] ?></title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="">
+   <link rel="stylesheet" href="http://localhost:/belajarphpmvc/public/css/bootstrap.min.css">
 </head>
 
 <body>
