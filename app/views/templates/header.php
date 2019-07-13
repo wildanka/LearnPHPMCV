@@ -31,6 +31,9 @@
                <li class="nav-item">
                   <a class="nav-link" href="<?= BASE_URL . '/about' ?>">About</a>
                </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="<?= BASE_URL . '/mahasiswa' ?>">Mahasiswa</a>
+               </li>
                <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                      Dropdown
