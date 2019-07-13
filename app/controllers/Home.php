@@ -8,9 +8,10 @@ class Home extends Controller
    {
 
       $header_data['judul'] = 'Home';
+      $data['nama'] = $this->model('User_model')->getUser();
 
       $this->view('templates/header', $header_data);
-      $this->view('home/index');
+      $this->view('home/index', $data);
       $this->view('templates/footer');
    }
 }
