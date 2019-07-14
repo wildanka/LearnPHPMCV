@@ -20,7 +20,8 @@
                <li class="list-group-item">
                   <?= $mhs['nama'] ?>
                   <a href="<?= BASE_URL; ?>/mahasiswa/delete_mahasiswa/<?= $mhs['id'] ?>" class="badge badge-danger float-right ml-1" onclick="return confirm('anda yakin ingin menghapus data ini?');">Hapus</a>
-                  <a href="#" class="badge badge-success float-right ml-1" data-toggle="modal" id="tampilModalUbah" data-target="#mahasiswaModal">Ubah</a>
+                  <a href="#" class="badge badge-success float-right ml-1 tampilModalUbah" data-toggle="modal" data-target="#mahasiswaModal" data-id="<?= $mhs['id']; ?>">Ubah</a>
+                  <!-- data-id digunakan untuk jquery -->
                   <a href="<?= BASE_URL; ?>/mahasiswa/detail/<?= $mhs['id'] ?>" class="badge badge-primary float-right">Lihat Detail</a>
                </li>
             </ul>
