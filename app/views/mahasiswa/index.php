@@ -35,23 +35,23 @@
             </button>
          </div>
          <div class="modal-body">
-            <form action="" method="POST">
+            <form action="<?= BASE_URL . '/mahasiswa/tambah' ?>" method="POST">
                <div class="form-group">
                   <label for="nama">Nama</label>
-                  <input type="text" class="form-control" id="nama" aria-describedby="name" placeholder="Masukkan nama mahasiswa">
+                  <input type="text" class="form-control" id="nama" aria-describedby="name" placeholder="Masukkan nama mahasiswa" name="nama">
                </div>
                <div class="form-group">
                   <label for="nim">NIM</label>
-                  <input type="text" class="form-control" id="nim" aria-describedby="nim" placeholder="Masukkan NIM">
+                  <input type="text" class="form-control" id="nim" aria-describedby="nim" placeholder="Masukkan NIM" name="nim">
                </div>
                <div class="form-group">
                   <label for="email">Email address</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Masukkan Email">
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Masukkan Email" name="email">
                   <small id="emailHelp" class="form-text text-muted">Kami tidak akan membagikan alamat email Anda kepada orang lain.</small>
                </div>
                <div class="form-group">
                   <label for="jurusan">Jurusan</label>
-                  <select class="form-control" id="jurusan">
+                  <select class="form-control" id="jurusan" name="jurusan">
                      <option>Teknik Informatika</option>
                      <option>Teknik Komputer</option>
                      <option>Sistem Informasi</option>
@@ -62,7 +62,7 @@
          </div>
          <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
             </form>
          </div>
       </div>

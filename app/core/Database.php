@@ -85,4 +85,12 @@ class Database
       $this->execute();
       return $this->stmt->fetch(PDO::FETCH_ASSOC);
    }
+
+   /**
+    * method ini akan menghitung jumlah baris yang berubah di tab
+    */
+   public function rowCount()
+   {
+      return $this->stmt->rowCount(); //$this->stmt->rowCount() yang ini milik PDO
+   }
 }
