@@ -38,6 +38,19 @@ class Mahasiswa extends Controller
       }
    }
 
+   public function ubah_data_mahasiswa()
+   {
+      if ($this->model('Mahasiswa_model')->ubahDataMahasiswa($_POST) > 0) {
+         Flasher::setFlash('dengan nim ' . $_POST['nim'] . ' dan nama ' . $_POST['nama'] . ' berhasil', 'diubah', 'success');
+         header('Location: ' . BASE_URL . '/mahasiswa');
+         exit;
+      } else {
+         Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+         header('Location: ' . BASE_URL . '/mahasiswa');
+         exit;
+      }
+   }
+
    // method untuk menghapus data mahasiswa
    public function delete_mahasiswa($id)
    {
