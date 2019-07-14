@@ -9,7 +9,7 @@
    <div class="row">
       <div class="col-6">
          <!-- Button trigger modal -->
-         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahMahasiswaModal">
+         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mahasiswaModal" id="tampilModalTambah">
             Tambah Data Mahasiswa
          </button> <br><br>
 
@@ -19,8 +19,8 @@
             <ul class="list-group">
                <li class="list-group-item">
                   <?= $mhs['nama'] ?>
-
-                  <a href="<?= BASE_URL; ?>/mahasiswa/delete_mahasiswa/<?= $mhs['id'] ?>" class="badge badge-danger float-right ml-1" onclick="return confirm('anda yakin ingin menghapus data ini?');">Delete</a>
+                  <a href="<?= BASE_URL; ?>/mahasiswa/delete_mahasiswa/<?= $mhs['id'] ?>" class="badge badge-danger float-right ml-1" onclick="return confirm('anda yakin ingin menghapus data ini?');">Hapus</a>
+                  <a href="#" class="badge badge-success float-right ml-1" data-toggle="modal" id="tampilModalUbah" data-target="#mahasiswaModal">Ubah</a>
                   <a href="<?= BASE_URL; ?>/mahasiswa/detail/<?= $mhs['id'] ?>" class="badge badge-primary float-right">Lihat Detail</a>
                </li>
             </ul>
@@ -32,11 +32,11 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="tambahMahasiswaModal" tabindex="-1" role="dialog" aria-labelledby="tambahMahasiswaModalLabel" aria-hidden="true">
+<div class="modal fade" id="mahasiswaModal" tabindex="-1" role="dialog" aria-labelledby="mahasiswaModalLabel" aria-hidden="true">
    <div class="modal-dialog" role="document">
       <div class="modal-content">
          <div class="modal-header">
-            <h5 class="modal-title" id="tambahMahasiswaModalLabel">Tambah Data Mahasiswa</h5>
+            <h5 class="modal-title" id="mahasiswaModalLabel">Tambah Data Mahasiswa</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                <span aria-hidden="true">&times;</span>
             </button>
