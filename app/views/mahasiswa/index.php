@@ -1,8 +1,10 @@
 <div class="container mt-5">
 
-   <div class="col-lg-6">
-      <!-- Flasher::getFlash() digunakan karena getFlash merupakan method static -->
-      <?php Flasher::getFlash() ?>
+   <div class="row">
+      <div class="col-lg-6">
+         <!-- Flasher::getFlash() digunakan karena getFlash merupakan method static -->
+         <?php Flasher::getFlash() ?>
+      </div>
    </div>
    <div class="row">
       <div class="col-6">
