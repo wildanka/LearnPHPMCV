@@ -22,8 +22,6 @@
 
                   <a href="<?= BASE_URL; ?>/mahasiswa/delete_mahasiswa/<?= $mhs['id'] ?>" class="badge badge-danger float-right ml-1" onclick="return confirm('anda yakin ingin menghapus data ini?');">Delete</a>
                   <a href="<?= BASE_URL; ?>/mahasiswa/detail/<?= $mhs['id'] ?>" class="badge badge-primary float-right">Lihat Detail</a>
-
-
                </li>
             </ul>
 
