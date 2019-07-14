@@ -6,13 +6,30 @@
          <?php Flasher::getFlash() ?>
       </div>
    </div>
-   <div class="row">
-      <div class="col-6">
+
+   <div class="row mb-3">
+      <div class="col-lg-6">
          <!-- Button trigger modal -->
          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mahasiswaModal" id="tampilModalTambah">
             Tambah Data Mahasiswa
          </button> <br><br>
+      </div>
+   </div>
+   <div class="row mb-3">
+      <div class="col-lg-6">
+         <form action="<?= BASE_URL . '/mahasiswa/cari' ?>" method="post">
+            <div class="input-group mb-3">
+               <input type="text" class="form-control" placeholder="Cari NIM atau Nama Mahasiswa" aria-label="Recipient's username" aria-describedby="button-cari" class="keyword" id="keyword" name="keyword">
+               <div class="input-group-append">
+                  <button class="btn btn-primary" type="submit" id="button-cari">Cari</button>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
 
+   <div class="row">
+      <div class="col-6">
          <h3>Daftar Mahasiswa</h3>
 
          <?php foreach ($data['mahasiswa'] as $mhs) : ?>
