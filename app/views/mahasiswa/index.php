@@ -44,6 +44,7 @@
          </div>
          <div class="modal-body">
             <form action="<?= BASE_URL . '/mahasiswa/tambah' ?>" method="POST">
+               <input type="hidden" name="id" id="id">
                <div class="form-group">
                   <label for="nama">Nama</label>
                   <input type="text" class="form-control" id="nama" aria-describedby="name" placeholder="Masukkan nama mahasiswa" name="nama">
