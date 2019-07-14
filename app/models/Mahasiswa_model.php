@@ -26,7 +26,7 @@ class Mahasiswa_model
 
    public function tambahDataMahasiswa($data)
    {
-      /*    $query = "INSERT INTO " . $this->table . " VALUES  ('', :nama, :nim, :email, :jurusan)";
+      $query = "INSERT INTO " . $this->table . "VALUES  ('', :nama, :nim, :email, :jurusan)";
 
       $this->db->query($query);
       $this->db->bind('nama', $data['nama']);
@@ -35,7 +35,6 @@ class Mahasiswa_model
       $this->db->bind('jurusan', $data['jurusan']);
       $this->db->execute();
 
-      return $this->db->rowCount(); */
-      return 0;
+      return $this->db->rowCount();
    }
 }
