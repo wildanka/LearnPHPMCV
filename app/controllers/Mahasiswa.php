@@ -22,7 +22,6 @@ class Mahasiswa extends Controller
       $this->view('templates/footer');
    }
 
-
    // method untuk menambahkan data mahasiswa yang baru
    public function tambah()
    {
@@ -34,6 +33,20 @@ class Mahasiswa extends Controller
          exit;
       } else {
          Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+         header('Location: ' . BASE_URL . '/mahasiswa');
+         exit;
+      }
+   }
+
+   // method untuk menghapus data mahasiswa
+   public function delete_mahasiswa($id)
+   {
+      if ($this->model('Mahasiswa_model')->hapusDataMahasiswa($id) > 0) { //jika ada baris baru yang dirubah
+         Flasher::setFlash('berhasil', 'dihapus', 'success');
+         header('Location: ' . BASE_URL . '/mahasiswa');
+         exit;
+      } else {
+         Flasher::setFlash('gagal', 'dihapus', 'danger');
          header('Location: ' . BASE_URL . '/mahasiswa');
          exit;
       }
